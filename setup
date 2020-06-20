@@ -5,4 +5,4 @@ import subprocess
 if __name__ == "__main__":
     path = os.environ['PATH']
 
-    subprocess.run("sudo cp starfish /usr/local/bin;sudo chmod 775 /usr/local/bin/starfish  ;cp -rf app/. ~/.uri_handlers; cd ~/.uri_handlers; echo 'export PATH=\"" + path + "\"' > .bash_profile;sudo  mv uri-handler.app /Applications/ ", shell=True)
+    subprocess.run("sudo cp starfish /usr/local/bin;sudo chmod 775 /usr/local/bin/starfish  ;cp -rf app/. ~/.uri_handlers; cd ~/.uri_handlers; echo 'export PATH=\"" + path + "\"' > .bash_profile; mv uri-handler.app /Applications/ ", shell=True)
