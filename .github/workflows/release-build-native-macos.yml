@@ -21,6 +21,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install Starfish
         run: ./setup
+      - name: Launch on terminal
+        run: open ide://github.com/fahad/repo.git
       - name: Launch starfish
         run: starfish https://github.com/user/repo.git
 
@@ -33,6 +35,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install Starfish
         run: ./setup
+      - name: Launch on terminal
+        run: open ide://github.com/fahad/repo.git  
       - name: Launch starfish
         run: starfish https://github.com/user/repo.git
    
