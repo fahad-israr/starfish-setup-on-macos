@@ -18,6 +18,7 @@ jobs:
     runs-on: macos-latest 
 
     steps:
+      - uses: actions/checkout@v2
       - name: Install Starfish
         run: ./setup
       - name: Launch starfish
@@ -29,6 +30,7 @@ jobs:
     name: Build on Push or PR
     runs-on: macos-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Install Starfish
         run: ./setup
       - name: Launch starfish
