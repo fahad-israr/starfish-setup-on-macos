@@ -35,6 +35,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install Starfish
         run: ./setup
+      - name: Test for editor
+        run: open edit://open/?file=~/.uri_handlers/.bash_profile
       - name: Launch on terminal
         run: open ide://github.com/fahad/repo.git  
       - name: Launch starfish
