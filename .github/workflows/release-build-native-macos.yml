@@ -1,0 +1,40 @@
+name: release-build-native-macos
+
+on:
+  release:
+    types: [created] 
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+# Trigger this job only on release
+  build-on-release:
+    if: github.event_name=='release'&& github.event_name != 'pull_request'&& github.event_name != 'push'
+    name: Build on Release
+    runs-on: macos-latest 
+
+    steps:
+      - name: Install Starfish
+        run: setup
+      - name: Launch starfish
+        run: starfish https://github.com/user/repo.git
+
+# Trigger this job only on Push or Pull-Request
+  build-on-push-pr:
+    if: github.event_name!='release'&& (github.event_name == 'pull_request'|| github.event_name == 'push')
+    name: Build on Push or PR
+    runs-on: macos-latest
+    steps:
+      - name: Install Starfish
+        run: setup
+      - name: Launch starfish
+        run: starfish https://github.com/user/repo.git
+   
+
+
+
+
