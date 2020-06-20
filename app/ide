@@ -8,7 +8,7 @@ if __name__ == "__main__":
         uri = sys.argv[1]
         result = urlparse(uri)
         query = parse_qs(result.query, keep_blank_values=True)
-        filename = query["file"][0]
-        subprocess.run("open -a TextEdit " + filename, shell=True)
+        
+        subprocess.run("open -a starfish " + query, shell=True)
     else:
         print("Error: no url provided")
