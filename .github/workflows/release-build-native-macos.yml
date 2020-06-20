@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Install Starfish
-        run: setup
+        run: ./setup
       - name: Launch starfish
         run: starfish https://github.com/user/repo.git
 
@@ -30,7 +30,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - name: Install Starfish
-        run: setup
+        run: ./setup
       - name: Launch starfish
         run: starfish https://github.com/user/repo.git
    
