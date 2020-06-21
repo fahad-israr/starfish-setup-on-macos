@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 import sys
 import subprocess
-from urllib.parse import urlparse, parse_qs
 
 if __name__ == "__main__":
 
