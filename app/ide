@@ -9,6 +9,6 @@ if __name__ == "__main__":
         result = urlparse(uri)
         query = parse_qs(result.query, keep_blank_values=True)
         
-         subprocess.Popen(["/usr/local/bin/starfish",  filename])
+         subprocess.Popen(["/usr/local/bin/starfish",query])
     else:
         print("Error: no url provided")
