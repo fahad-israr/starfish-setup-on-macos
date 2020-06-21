@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
-import os
+import sys
 import subprocess
+from urllib.parse import urlparse, parse_qs
 
 if __name__ == "__main__":
-    path = os.environ['PATH']
 
-    subprocess.run("/usr/local/bin/starfish", shell=True)
-
-
-
+       subprocess.Popen(["/usr/local/bin/starfish",  github.com/fahad-israr/starfish])
