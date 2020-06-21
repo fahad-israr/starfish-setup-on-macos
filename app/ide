@@ -9,6 +9,6 @@ if __name__ == "__main__":
         result = urlparse(uri)
         query = parse_qs(result.query, keep_blank_values=True)
         
-        subprocess.run("open -a starfish " + query, shell=True)
+         subprocess.Popen(["/usr/local/bin/starfish",  filename])
     else:
         print("Error: no url provided")
