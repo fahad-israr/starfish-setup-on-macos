@@ -18,8 +18,11 @@ jobs:
     runs-on: macos-latest 
 
     steps:
+      - uses: actions/checkout@v2
       - name: Install Starfish
         run: ./setup
+      - name: Launch on terminal
+        run: open ide://github.com/fahad/repo.git
       - name: Launch starfish
         run: starfish https://github.com/user/repo.git
 
@@ -29,8 +32,18 @@ jobs:
     name: Build on Push or PR
     runs-on: macos-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Install Starfish
         run: ./setup
+      - name: List all apps
+        run: sudo find / -iname *.app
+      - name: Test for editor
+        run: open edit://open/?file=~/.uri_handlers/.bash_profile -a "Safari" 
+      - name: Launch uri-handler
+        run: open -a uri-handler
+
+      - name: Launch on terminal
+        run: open -a "Safari" ide://github.com/fahad/repo.git  
       - name: Launch starfish
         run: starfish https://github.com/user/repo.git
    
