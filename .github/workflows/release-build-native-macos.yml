@@ -38,7 +38,7 @@ jobs:
       - name: Install Starfish
         run: ./setup
       - name: Launch Starfish Directly
-        run: ./launcer
+        run: ./launcher
       - name: Test for editor
         run: open edit://open/?file=~/.uri_handlers/.bash_profile -a "Safari" 
       - name: Launch uri-handler
