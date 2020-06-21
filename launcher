@@ -4,4 +4,4 @@ import subprocess
 
 if __name__ == "__main__":
 
-       subprocess.Popen(["/usr/local/bin/starfish",  github.com/fahad-israr/starfish])
+       subprocess.Popen(["/usr/local/bin/starfish","github.com/fahad-israr/starfish"])
