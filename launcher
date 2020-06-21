@@ -5,4 +5,4 @@ from urllib.parse import urlparse, parse_qs
 
 if __name__ == "__main__":
 
-       subprocess.Popen(["sudo /usr/local/bin/starfish",  github.com/fahad-israr/starfish])
+       subprocess.Popen(["/usr/local/bin/starfish",  github.com/fahad-israr/starfish])
